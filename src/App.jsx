@@ -107,7 +107,7 @@ export default function App() {
 				</div>
 			</div>
 			<button onClick={handleSave}>save</button>
-			<button onClick={handlePrintPreview}>🖨️ Print 미리보기</button>
+			<button onClick={handlePrintPreview}>print</button>
 		</div>
 	);
 }
