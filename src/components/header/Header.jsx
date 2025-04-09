@@ -1,6 +1,7 @@
 import './Header.css';
 import ApprovalGrid from "../approvalGrid/ApprovalGrid.jsx";
 import { Fragment } from "react";
+import App from "../../App.jsx";
 
 export const Header = () => {
   const labels = ["입안일자", "보존년한", "문서번호", "입안부서", "입 안 자"];
@@ -16,7 +17,9 @@ export const Header = () => {
 
       {/* 오른쪽 병합 셀: 5행 세로 병합, 3번째 column */}
       <div className="cell textarea">
-        <textarea placeholder="내용을 입력하세요" />
+        {/*<div className="approval-grid">*/}
+         <ApprovalGrid className="approval-grid"/>
+        {/*</div>*/}
       </div>
 
       {/* 마지막 줄 */}

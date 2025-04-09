@@ -11,12 +11,12 @@ export const ApprovalGrid = () => {
   return (
     <div className="grid-container">
       {contents.map((text, idx) => (
-        <div key={idx} className="cell">
+        <div key={idx} className="approval-cell">
           {text}
         </div>
       ))}
     </div>
   );
-}
+};
 
 export default ApprovalGrid;
