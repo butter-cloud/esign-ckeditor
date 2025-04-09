@@ -6,6 +6,7 @@
     max-width: 1000px;
     border: 1px solid black;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* 기본 셀 스타일 */
@@ -39,7 +40,9 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .approval-grid {
@@ -48,7 +51,7 @@
     border: none;
     resize: none;
     font-size: 14px;
-    padding: 8px;
+    padding: 0;
     box-sizing: border-box;
 }
 

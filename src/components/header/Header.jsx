@@ -17,9 +17,7 @@ export const Header = () => {
 
       {/* 오른쪽 병합 셀: 5행 세로 병합, 3번째 column */}
       <div className="cell textarea">
-        {/*<div className="approval-grid">*/}
          <ApprovalGrid className="approval-grid"/>
-        {/*</div>*/}
       </div>
 
       {/* 마지막 줄 */}
