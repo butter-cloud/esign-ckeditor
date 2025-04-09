@@ -5,14 +5,17 @@
     width: 100%;
     max-width: 1000px;
     border: 1px solid black;
+    position: relative;
 }
 
+/* 기본 셀 스타일 */
 .cell {
     border: 1px solid black;
     padding: 6px 8px;
     display: flex;
     align-items: center;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .label {
@@ -29,8 +32,10 @@
     font-size: 14px;
 }
 
+/* 오른쪽 textarea 병합 셀 */
 .textarea {
-    grid-row: 1 / span 5;
+    grid-column: 3 / 4;    /* 오른쪽 column */
+    grid-row: 1 / span 5;  /* 1~5행 병합 */
     padding: 0;
 }
 
@@ -42,4 +47,15 @@
     font-size: 14px;
     padding: 8px;
     box-sizing: border-box;
+}
+
+/* 제목 줄 */
+.title-label {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+
+.title-input {
+    grid-column: 2 / 4; /* 2, 3 열 병합 */
+    grid-row: 6 / 7;
 }
