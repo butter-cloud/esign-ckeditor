@@ -1,4 +1,6 @@
 import axios from "axios";
+import headerStyles from '../components/header/Header.css?inline';
+import gridStyles from '../components/approvalGrid/ApprovalGrid.css?inline';
 
 export const useEditorActions = (editor, title) => {
   const handleTempSave = () => {
@@ -62,6 +64,8 @@ export const useEditorActions = (editor, title) => {
             max-width: 100%;
             height: auto;
           }
+          ${headerStyles}
+          ${gridStyles}
         </style>
       </head>
       <body>
