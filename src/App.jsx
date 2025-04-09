@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import {ClassicEditor} from "ckeditor5";
 import {useClipboardHandler} from "./hooks/useClipboardHandler.js";
@@ -7,7 +7,6 @@ import {useEditorConfig} from "./hooks/useEditorConfig.js";
 import 'ckeditor5/ckeditor5.css';
 import './App.css';
 import {useEditorActions} from "./hooks/useEditorActions.js";
-import Editor from "./components/Editor.jsx";
 
 export default function App() {
 	const [title, setTitle] = useState('');
@@ -44,7 +43,6 @@ export default function App() {
 						<CKEditor editor={ClassicEditor} onReady={(editor) => handleReady(editor)} config={editorConfig}/>}</div>
 				</div>
 			</div>
-			<Editor/>
 
 			<button onClick={handleTempSave}>임시저장</button>
 			<button onClick={handleSave}>save</button>
