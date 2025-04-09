@@ -7,6 +7,7 @@ import {useEditorConfig} from "./hooks/useEditorConfig.js";
 import 'ckeditor5/ckeditor5.css';
 import './App.css';
 import {useEditorActions} from "./hooks/useEditorActions.js";
+import Header from "./components/header/Header.jsx";
 
 export default function App() {
 	const [title, setTitle] = useState('');
@@ -30,12 +31,14 @@ export default function App() {
 	const handleReady = (editor) => {
 		console.log('Editor is ready to use!', editor);
 		setEditor(editor);
-		handleClipboardInput(editor);
+		// handleClipboardInput(editor);
 	}
 
 	return (
 		<div className="main-container">
-			<span>제목 </span><input type={"text"} onChange={handleTitle}/>
+			<div id={'document-header'}>
+				<Header/>
+			</div>
 
 			<div className="editor-container editor-container_classic-editor">
 				<div className="editor-container__editor">

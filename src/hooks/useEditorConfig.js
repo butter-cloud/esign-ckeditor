@@ -1,6 +1,5 @@
 import {useMemo} from "react";
 import {
-  ClassicEditor,
   Alignment,
   Autoformat,
   AutoImage,
@@ -116,8 +115,9 @@ export const useEditorConfig = (isLayoutReady) => {
           supportAllValues: true
         },
         fontSize: {
-          options: [10, 12, 14, 'default', 18, 20, 22],
-          supportAllValues: true
+          options: [8, 9, 10, 'default', 12, 14, 16, 18, 20, 22],
+          supportAllValues: true,
+          default: 11
         },
         htmlSupport: {
           allow: [
@@ -166,7 +166,10 @@ export const useEditorConfig = (isLayoutReady) => {
             'tableCellProperties'
           ]
         },
-        translations: [translations]
+        translations: [translations],
+        contentCss: [
+          'body { font-size: 11px; }',
+        ]
       }
     };
   }, [isLayoutReady]);

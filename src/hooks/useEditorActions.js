@@ -29,7 +29,8 @@ export const useEditorActions = (editor, title) => {
   const handlePrintPreview = () => {
     if (!editor) return;
 
-    const htmlContent = editor.getData();
+    const header = document.getElementById('document-header')?.innerHTML;
+    const body = editor.getData();
 
     const printWindow = window.open('', '_blank', 'width=800,height=600');
 
@@ -64,7 +65,8 @@ export const useEditorActions = (editor, title) => {
         </style>
       </head>
       <body>
-        ${htmlContent}
+        ${header}
+        ${body}
         <script>
           window.onload = function () {
             window.print();
