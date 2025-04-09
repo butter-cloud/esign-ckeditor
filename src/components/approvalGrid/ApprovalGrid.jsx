@@ -10,11 +10,17 @@ export const ApprovalGrid = () => {
 
   return (
     <div className="grid-container">
-      {contents.map((text, idx) => (
-        <div key={idx} className="approval-cell">
-          {text}
-        </div>
-      ))}
+      {contents.map((text, idx) => {
+        const isAorCRow = (idx >= 0 && idx < 5) || (idx >= 10 && idx < 15);
+        return (
+          <div
+            key={idx}
+            className={`approval-cell ${isAorCRow ? 'highlight-row' : ''}`}
+          >
+            {text}
+          </div>
+        );
+      })}
     </div>
   );
 };
