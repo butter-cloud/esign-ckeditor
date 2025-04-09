@@ -1,3 +1,9 @@
+.doc-title {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
 .doc-table {
     display: grid;
     grid-template-columns: 120px 200px 1fr;
