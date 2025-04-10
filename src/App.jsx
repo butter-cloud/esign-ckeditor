@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import {ClassicEditor} from "ckeditor5";
-import {useClipboardHandler} from "./hooks/useClipboardHandler.js";
 import {useEditorConfig} from "./hooks/useEditorConfig.js";
 
 import 'ckeditor5/ckeditor5.css';
@@ -14,7 +13,6 @@ export default function App() {
 	const [editor, setEditor] = useState(null);
 	const [isLayoutReady, setIsLayoutReady] = useState(false);
 
-	const { handleClipboardInput } = useClipboardHandler();
 	const { editorConfig} = useEditorConfig(isLayoutReady);
 	const { handleTempSave, handleSave, handlePrintPreview } = useEditorActions(editor, title);
 
@@ -31,7 +29,6 @@ export default function App() {
 	const handleReady = (editor) => {
 		console.log('Editor is ready to use!', editor);
 		setEditor(editor);
-		// handleClipboardInput(editor);
 	}
 
 	return (

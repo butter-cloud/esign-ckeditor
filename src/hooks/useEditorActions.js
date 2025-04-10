@@ -1,4 +1,5 @@
 import axios from "axios";
+import appStyles from '../App.css?inline';
 import headerStyles from '../components/header/Header.css?inline';
 import gridStyles from '../components/approvalGrid/ApprovalGrid.css?inline';
 
@@ -68,6 +69,13 @@ export const useEditorActions = (editor, title) => {
             width: 100%;
             text-align: right;
           }
+          
+          .print-content-body-container {
+            padding: 113px 96px 96px 96px !important;
+            font-size: 11px !important;
+          }
+          
+          ${appStyles}
           ${headerStyles}
           ${gridStyles}
           
@@ -99,7 +107,9 @@ export const useEditorActions = (editor, title) => {
         </div>
         <div id="print-content">
           ${header}
+          <div class="print-content-body-container">
           ${body}
+          </div>
         </div>
         <script>
             function handlePrintButton() {
