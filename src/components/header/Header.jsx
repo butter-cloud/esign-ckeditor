@@ -38,7 +38,7 @@ export const Header = () => {
       {/* 마지막 줄 */}
       <div className="cell label title-label">제&nbsp;&nbsp;&nbsp;&nbsp;목</div>
       <div className="cell value title-input">
-        <input type="text" value={title} defaultValue="" onChange={(e) => setTitle(e.target.value)}/>
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)}/>
       </div>
     </div>
     </>
