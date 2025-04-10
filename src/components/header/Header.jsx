@@ -1,8 +1,10 @@
 import './Header.css';
 import ApprovalGrid from "../approvalGrid/ApprovalGrid.jsx";
-import { Fragment } from "react";
+import {Fragment, useState} from "react";
 
 export const Header = () => {
+
+  const [title, setTitle] = useState('');
 
   return (
     <>
@@ -36,7 +38,7 @@ export const Header = () => {
       {/* 마지막 줄 */}
       <div className="cell label title-label">제&nbsp;&nbsp;&nbsp;&nbsp;목</div>
       <div className="cell value title-input">
-        <input type="text" defaultValue="" />
+        <input type="text" value={title} defaultValue="" onChange={(e) => setTitle(e.target.value)}/>
       </div>
     </div>
     </>

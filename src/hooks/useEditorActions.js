@@ -75,6 +75,14 @@ export const useEditorActions = (editor, title) => {
             font-size: 11px !important;
           }
           
+          input {
+            border: none;
+            
+            &:focus {
+                outline: none;
+            }
+          }
+          
           ${appStyles}
           ${headerStyles}
           ${gridStyles}
@@ -94,7 +102,7 @@ export const useEditorActions = (editor, title) => {
                 top: 0;
                 left: 0;
             }
-        
+            
             @page {
                 margin: 20mm; /* 여백 조절 */
             }
@@ -114,6 +122,11 @@ export const useEditorActions = (editor, title) => {
         <script>
             function handlePrintButton() {
                 window.print();
+            }
+            window.onload = function() {
+                console.log("랄라라")
+                const inputElement = document.querySelector('input');
+                inputElement.readOnly = true;
             }
         </script>
       </body>

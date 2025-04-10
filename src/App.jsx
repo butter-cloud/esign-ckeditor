@@ -52,9 +52,6 @@ export default function App() {
 						<CKEditor editor={ClassicEditor} onReady={(editor) => handleReady(editor)} config={editorConfig}/>}</div>
 				</div>
 			</div>
-
-
-
 		</div>
 	);
 }
