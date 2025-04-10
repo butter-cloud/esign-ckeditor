@@ -49,7 +49,7 @@ export const useEditorActions = (editor, title) => {
         <style>
           body {
             font-family: 'Arial', sans-serif;
-            padding: 2rem;
+            padding: 10mm;
           }
           table {
             border-collapse: collapse;
@@ -72,8 +72,11 @@ export const useEditorActions = (editor, title) => {
           }
           
           .print-content-body-container {
-            padding: 113px 96px 96px 96px !important;
+            padding: 48px 30px 24px 30px !important; /* 워드 기본 레이아웃 여백에서 수정. 원래 113px 96px 96px 96px*/
             font-size: 11px !important;
+            word-break: normal; /* 단어 중간에서 줄바꿈 금지 */
+            overflow-wrap: normal; /* 필요할 경우 줄바꿈 (긴 단어는 잘림) */
+            white-space: normal; /* 기본 줄바꿈 허용 */
           }
           
           input {
@@ -105,7 +108,7 @@ export const useEditorActions = (editor, title) => {
             }
             
             @page {
-                margin: 20mm; /* 여백 조절 */
+                margin: 10mm 15mm; /* 여백 조절 */
             }
         }
         </style>
@@ -125,7 +128,6 @@ export const useEditorActions = (editor, title) => {
                 window.print();
             }
             window.onload = function() {
-                console.log("랄라라")
                 const inputElement = document.querySelector('input');
                 inputElement.readOnly = true;
             }

@@ -56,13 +56,11 @@ table p {
 .ck-editor__editable_inline {
   width: 794px; /* A4 가로 크기 */
   min-height: 1123px; /* A4 세로 크기 */
-  padding: 113px 96px 96px 96px !important; /* 워드 기본 레이아웃 여백 */
+  padding: 48px 96px 24px 96px !important; /* 워드 기본 레이아웃 여백에서 수정. 원래 113px 96px 96px 96px*/
   margin: 0 auto; /* 가운데 정렬 */
   box-sizing: border-box;
   background: white;
   border: 1px solid #ccc;
-  /*word-break: keep-all;        !* 단어 중간에서 줄바꿈 금지 *!*/
-  /*white-space: normal;       !* 기본 줄바꿈 허용 *!*/
 
   word-break: normal; /* 단어 중간에서 줄바꿈 금지 */
   overflow-wrap: normal; /* 필요할 경우 줄바꿈 (긴 단어는 잘림) */
