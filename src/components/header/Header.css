@@ -1,77 +1,77 @@
 .doc-title {
-    font-size: 2rem;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .doc-table {
-    display: grid;
-    grid-template-columns: 120px 200px 1fr;
-    grid-template-rows: repeat(6, 30px);
-    width: 100%;
-    max-width: 1000px;
-    border: 1px solid black;
-    position: relative;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 120px 200px 1fr;
+  grid-template-rows: repeat(6, 30px);
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid black;
+  position: relative;
+  box-sizing: border-box;
 }
 
 /* 기본 셀 스타일 */
 .cell {
-    border: 1px solid black;
-    padding: 6px 8px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    box-sizing: border-box;
+  border: 1px solid black;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .label {
-    background-color: #f5f5f5;
-    font-weight: bold;
-    justify-content: center;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  justify-content: center;
 }
 
 .value span {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 /* 오른쪽 textarea 병합 셀 */
 .textarea {
-    grid-column: 3 / 4;
-    grid-row: 1 / span 5;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    border: none;
+  grid-column: 3 / 4;
+  grid-row: 1 / span 5;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
 }
 
 .approval-grid {
-    width: 100%;
-    height: 100%;
-    border: none;
-    resize: none;
-    font-size: 14px;
-    padding: 0;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* 제목 줄 */
 .title-label {
-    grid-column: 1 / 2;
-    grid-row: 6 / 7;
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
 }
 
 .title-input {
-    grid-column: 2 / 4; /* 2, 3 열 병합 */
-    grid-row: 6 / 7;
+  grid-column: 2 / 4; /* 2, 3 열 병합 */
+  grid-row: 6 / 7;
 }
 
 .title-input input {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }

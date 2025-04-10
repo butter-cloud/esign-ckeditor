@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import appStyles from '../App.css?inline';
 import headerStyles from '../components/header/Header.css?inline';
 import gridStyles from '../components/approvalGrid/ApprovalGrid.css?inline';
@@ -9,17 +9,18 @@ export const useEditorActions = (editor, title) => {
     const html = editor.getData();
     console.log('임시 저장할 HTML:', html);
 
-    axios.post('http://localhost:4000/save', {
-      title: title,
-      html: JSON.stringify(html)
-    })
+    axios
+      .post('http://localhost:4000/save', {
+        title: title,
+        html: JSON.stringify(html),
+      })
       .then(response => {
         console.log('서버 응답:', response.data);
       })
       .catch(error => {
         console.log('서버 오류:', error);
-      })
-  }
+      });
+  };
   const handleSave = () => {
     if (editor) {
       const html = editor.getData();
@@ -27,7 +28,7 @@ export const useEditorActions = (editor, title) => {
     } else {
       console.warn('⚠️ Editor is not ready yet!');
     }
-  }
+  };
 
   const handlePrintPreview = () => {
     if (!editor) return;
@@ -139,6 +140,6 @@ export const useEditorActions = (editor, title) => {
   return {
     handleTempSave,
     handleSave,
-    handlePrintPreview
-  }
-}
+    handlePrintPreview,
+  };
+};

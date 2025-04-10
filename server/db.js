@@ -6,6 +6,6 @@ const pool = new Pool({
   database: 'esign',
   password: 'postgres1234',
   port: 5432,
-})
+});
 
 module.exports = pool;
