@@ -73,7 +73,7 @@ export const useEditorActions = (editor, title) => {
           
           .print-content-body-container {
             padding: 48px 30px 24px 30px !important; /* 워드 기본 레이아웃 여백에서 수정. 원래 113px 96px 96px 96px*/
-            font-size: 11px !important;
+            font-size: 10pt !important;
             word-break: normal; /* 단어 중간에서 줄바꿈 금지 */
             overflow-wrap: normal; /* 필요할 경우 줄바꿈 (긴 단어는 잘림) */
             white-space: normal; /* 기본 줄바꿈 허용 */

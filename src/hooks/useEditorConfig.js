@@ -112,9 +112,18 @@ export const useEditorConfig = isLayoutReady => {
           supportAllValues: true,
         },
         fontSize: {
-          options: [8, 9, 10, 'default', 12, 14, 16, 18, 20, 22],
+          options: [
+            { title: '8pt', model: '10.6667px' },
+            { title: '9pt', model: '12px' },
+            { title: '10pt (기본)', model: '13.3333px' },
+            { title: '11pt', model: '14.6667px' },
+            { title: '12pt', model: '16px' },
+            { title: '14pt', model: '18.6667px' },
+            { title: '16pt', model: '21.3333px' },
+            { title: '18pt', model: '24px' },
+          ],
           supportAllValues: true,
-          default: 11,
+          default: '13.3333px',
         },
         htmlSupport: {
           allow: [
@@ -164,7 +173,7 @@ export const useEditorConfig = isLayoutReady => {
           ],
         },
         translations: [translations],
-        contentCss: ['body { font-size: 11px; }'],
+        contentCss: ['body { font-size: 10pt; }'],
       },
     };
   }, [isLayoutReady]);
