@@ -36,6 +36,15 @@ export default function App() {
 
 	return (
 		<div className="main-container">
+			<div className={'header-button-container'}>
+				<div className={'header-button-left'}>
+					<button onClick={handlePrintPreview}>미리보기</button>
+				</div>
+				<div className={'header-button-right'}>
+					<button onClick={handleTempSave}>임시저장</button>
+					<button onClick={handleSave}>상신</button>
+				</div>
+			</div>
 			<div id={'document-header'}>
 				<Header/>
 			</div>
@@ -47,9 +56,8 @@ export default function App() {
 				</div>
 			</div>
 
-			<button onClick={handleTempSave}>임시저장</button>
-			<button onClick={handleSave}>save</button>
-			<button onClick={handlePrintPreview}>print</button>
+
+
 		</div>
 	);
 }

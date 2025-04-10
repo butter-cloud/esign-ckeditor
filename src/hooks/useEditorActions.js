@@ -64,17 +64,47 @@ export const useEditorActions = (editor, title) => {
             max-width: 100%;
             height: auto;
           }
+          .print-button-container {
+            width: 100%;
+            text-align: right;
+          }
           ${headerStyles}
           ${gridStyles}
+          
+          @media print {
+            /* 인쇄할 내용 외에는 모두 숨기기 */
+            body * {
+                visibility: hidden;
+            }
+        
+            #print-content, #print-content * {
+                visibility: visible;
+            }
+        
+            #print-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        
+            @page {
+                margin: 20mm; /* 여백 조절 */
+            }
+        }
         </style>
       </head>
       <body>
-        ${header}
-        ${body}
+        <div class="print-button-container">
+            <button onClick="handlePrintButton()">인쇄</button>
+        </div>
+        <div id="print-content">
+          ${header}
+          ${body}
+        </div>
         <script>
-          window.onload = function () {
-            window.print();
-          };
+            function handlePrintButton() {
+                window.print();
+            }
         </script>
       </body>
       </html>
