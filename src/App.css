@@ -66,3 +66,8 @@ table p {
   overflow-wrap: normal; /* 필요할 경우 줄바꿈 (긴 단어는 잘림) */
   white-space: normal; /* 기본 줄바꿈 허용 */
 }
+
+.ck-dropdown__panel {
+  max-height: 200px !important; /* 원하는 높이로 조절 */
+  overflow-y: auto !important;
+}
