@@ -7,7 +7,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="doc-title">품 의 서</div>
+      <div className="doc-title">품&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;의&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서</div>
       <div className="doc-table">
         {/* 입안일자 */}
         <div className="cell label">입안일자</div>
@@ -34,7 +34,7 @@ export const Header = () => {
         </div>
 
         {/* 입안자 */}
-        <div className="cell label">입 안 자</div>
+        <div className="cell label">입&nbsp;&nbsp;&nbsp;안&nbsp;&nbsp;&nbsp;자</div>
         <div className="cell value">
           <span>이승지</span>
         </div>
@@ -45,7 +45,7 @@ export const Header = () => {
         </div>
 
         {/* 마지막 줄 */}
-        <div className="cell label title-label">제&nbsp;&nbsp;&nbsp;&nbsp;목</div>
+        <div className="cell label title-label">제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;목</div>
         <div className="cell value title-input">
           <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
         </div>
